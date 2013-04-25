@@ -140,11 +140,14 @@ module Tire
         end
 
         # Reorder records to preserve the order from search results
-        @response['hits']['hits'].map do |item|
+        results_with_load = @response['hits']['hits'].map do |item|
           records[item['_type']].detect do |record|
             record.id.to_s == item['_id'].to_s
           end
         end
+        # Compact to remove any nil objects.
+        results_with_load.compact!
+        results_with_load
       end
 
       def __find_records_by_ids(klass, ids)
