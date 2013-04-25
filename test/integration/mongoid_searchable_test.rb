@@ -106,6 +106,14 @@ if ENV["MONGODB_IS_AVAILABLE"]
               assert !results.any?
             end
           end
+
+          should "remove nil search results when object is orphaned (in index but not in db)" do
+            # Delete (not destroy) so that callbacks are not fired, in order to orphan the object (search index is not updated).
+            @first_article.delete
+
+            results = MongoidArticle.tire.search('Test', :load => true)
+            assert_equal MongoidArticle.count, results.size
+          end
         end
 
         should "remove document from index on destroy" do
