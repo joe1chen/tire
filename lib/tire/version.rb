@@ -1,12 +1,15 @@
 module Tire
-  VERSION   = "0.5.7"
+  VERSION   = "0.6.1"
 
   CHANGELOG =<<-END
     IMPORTANT CHANGES LATELY:
 
-    * Added support for the `constant_score` query
-    * Prevent `Curl::Err::MultiBadEasyHandle` errors in the Curb client
-    * Refactored the model importing integration and Rake tasks
-    * Enabled passing options to the `terms` query
+    * Added support for bulk update
+    * Improved Kaminari support
+    * Improved the behaviour of `default` properties in Tire::Persistence
+    * Added the information about the gem "retirement" and other documentation improvements
+    * Fixed errors due to NewRelic's patching of Curl
+    * [ACTIVEMODEL] Use Object#id#to_s in `get_id_from_document`
+    * Added support for "Delete By Query" API
   END
 end
