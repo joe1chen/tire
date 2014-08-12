@@ -5,10 +5,10 @@ Tire
 
   NOTICE: This library has been renamed and retired in September 2013
           ([read the explanation](https://github.com/karmi/retire/wiki/Tire-Retire)).
+          It is not considered compatible with Elasticsearch 1.x.
 
-  Have a look at the **<http://github.com/elasticsearch/elasticsearch-ruby>**
-  suite of gems, which will contain similar set of features for
-  ActiveRecord and Rails integration as Tire.
+  Have a look at the **<http://github.com/elasticsearch/elasticsearch-rails>** suite of gems,
+  which contain similar set of features for ActiveModel/Record and Rails integration as Tire.
 
 ---------------------------------------------------------------------------------------------------
 
@@ -820,3 +820,5 @@ You can send feedback via [e-mail](mailto:karmi@karmi.cz) or via [Github Issues]
 -----
 
 [Karel Minarik](http://karmi.cz) and [contributors](http://github.com/karmi/tire/contributors)
+
+![](https://ga-beacon.appspot.com/UA-46901128-1/karmi/retire?pixel)
